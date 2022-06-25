@@ -1,12 +1,12 @@
 {
     "routes": [
-      { "src": "#/", "dest": "/" },
-      { "src": "#/reset", "dest": "/" },
-      { "src": "#/registrer", "dest": "/" },
-      { "src": "#/home", "dest": "/"},
-      { "src": "#/editDocs/:id", "dest": "/"},
-      { "src": "#/logout", "dest": "/"},
-      { "src": "#/info", "dest": "/"}
+      { "src": "/", "dest": "/" },
+      { "src": "/reset", "dest": "/" },
+      { "src": "/registrer", "dest": "/" },
+      { "src": "/home", "dest": "/"},
+      { "src": "/editDocs/:id", "dest": "/"},
+      { "src": "/logout", "dest": "/"},
+      { "src": "/info", "dest": "/"}
     ]
   }
   
