@@ -7,6 +7,12 @@
       { "src": "/editDocs/:id", "dest": "/"},
       { "src": "/logout", "dest": "/"},
       { "src": "/info", "dest": "/"}
-    ]
+    ],
+    "rewrites": [
+        {
+          "source": "/((?!api/.*).*)",
+          "destination": "/index.html"
+        }
+      ]
   }
   
