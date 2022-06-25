@@ -1,38 +1,166 @@
 .App {
+  height: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0px;
+  background-color: #fff;
+  z-index: +2500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navPic {
+  border: 1px solid #ccc;
+  background: rgb(34,183,195);
+  background: linear-gradient(0deg, rgba(34,183,195,1) 38%, rgba(79,45,253,1) 100%);
+  background-size: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.profilePic {
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.links {
+  width: max-content;
+}
+
+.test {
+  align-self: center;
+}
+
+.docNav {
+  margin-top: 120px;
+  margin-bottom: 20px;
+  z-index: -300;
+}
+
+.docs {
+  width: 90vw;
+  height: 100%;
+  margin-bottom: 0px;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-self: start;
 }
 
-.App-link {
-  color: #61dafb;
+.loading {
+  grid-template-columns: repeat(1, 1fr);
 }
 
-@keyframes App-logo-spin {
+.doc {
+  width: 100%;
+  height: 150px;
+  justify-self: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  flex-wrap: wrap; 
+}
+
+.documentPic {
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  background: rgb(34,183,195);
+  background: linear-gradient(0deg, rgba(34,183,195,1) 38%, rgba(79,45,253,1) 100%);
+  background-size: cover;
+  z-index: -1;
+}
+
+.documentPublicStatus {
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 0;
+  color: rgba(0, 0, 0, 0.504);
+}
+
+.MuiModal-root {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalRadio {
+  justify-content: start;
+}
+
+.deleteModalTitle {
+  align-self: end;
+}
+
+.deleteModalbutton {
+  align-self: start;
+}
+
+.modalHeader {
+  justify-content: space-between;
+}
+
+.closeBtn {
+  justify-self: end;
+  align-self: start;
+}
+
+.account {
+  justify-content: space-around;
+}
+
+.quill {
+  height: 80vh;
+  width: 95vw;
+  z-index: 100;
+  align-self: start;
+}
+
+.docsHeader {
+  height: 70px;
+  justify-content: space-around;
+  padding-bottom: 10px;
+}
+
+.spinning {
+  font-size: 54px;
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spinningContainer {
+  height: 100vh;
+}
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 685px) {
+  .docs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .quill {
+    height: 65vh;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navHeader {
+    font-size: x-large;
+  }
+
+  .docs {
+    margin-top: 100px;
   }
 }
