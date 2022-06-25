@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Login } from './components/login/login';
 import './App.css';
 import { Home } from './components/pages/home';
@@ -12,7 +12,7 @@ import {Info} from './components/pages/info'
 function App() {
   return (
     <div className="App grid">
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path='/' element={<Login/>}></Route>
           <Route path='/reset' element={<Reset />}></Route>
@@ -23,7 +23,7 @@ function App() {
           <Route path="/logout" element={<LogOut />}></Route>
           <Route path="/info" element={<Info />}></Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
